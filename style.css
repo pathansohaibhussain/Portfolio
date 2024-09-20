@@ -27,6 +27,7 @@ body {
     0% {
         background-position: 0% 0%;
     }
+
     100% {
         background-position: 100% 0%;
     }
@@ -223,7 +224,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: stretch; /* Ensure children stretch to the same height */
+    align-items: stretch;
+    /* Ensure children stretch to the same height */
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -233,7 +235,8 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.about-me-left, .qualities-right {
+.about-me-left,
+.qualities-right {
     flex: 1;
     min-width: 280px;
     background: #fff;
@@ -297,11 +300,11 @@ body {
     padding: 15px;
     border-radius: 8px;
     text-align: center;
-    box-shadow:-5px 4px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: -5px 4px 5px rgba(0, 0, 0, 0.1);
     transition: background 0.3s, transform 0.3s;
     font-size: 14px;
     width: 75%;
-    max-width: 120px; 
+    max-width: 120px;
     cursor: pointer;
 }
 
@@ -330,10 +333,13 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    .about-me-left, .qualities-right {
+
+    .about-me-left,
+    .qualities-right {
         width: 100%;
         padding: 10px;
     }
+
     .qualities-grid {
         grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     }
@@ -341,6 +347,10 @@ body {
 
 
 /* Resume Section Styles */
+
+.center {
+    text-align: center;
+}
 
 .resume {
     background-color: #180161;
@@ -679,19 +689,26 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 0 20px;
+    border-radius: 10px;
+    border: none;
 }
 
 .certificate-item {
     position: relative;
+    background-size: cover;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
 }
 
 .certificate-item img {
     width: 100%;
+    height: 100%;
     border-radius: 10px;
+    object-fit: fill;
+    border: none;
 }
 
 .certificate-item:hover {
@@ -762,7 +779,11 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .certificate-item img {
-        height: auto;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: fill;
+        border: none;
     }
 }
 
@@ -779,14 +800,17 @@ body {
 .contact h2 {
     color: #515e13;
     margin-bottom: 30px;
-    font-size: 2rem; /* Larger font size for emphasis */
+    font-size: 2rem;
+    /* Larger font size for emphasis */
     font-weight: bold;
-    letter-spacing: 1px; /* Add some spacing for a modern look */
+    letter-spacing: 1px;
+    /* Add some spacing for a modern look */
     transition: color 0.3s ease;
 }
 
 .contact h2:hover {
-    color: #F5004F; /* Change color on hover for a subtle effect */
+    color: #F5004F;
+    /* Change color on hover for a subtle effect */
 }
 
 .contact-info {
@@ -800,20 +824,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px; /* Slightly larger for better visibility */
+    width: 50px;
+    /* Slightly larger for better visibility */
     height: 50px;
     border-radius: 50%;
     background-color: #69bedefc;
     color: #ffffff;
-    font-size: 28px; /* Larger icon size for better visibility */
+    font-size: 28px;
+    /* Larger icon size for better visibility */
     text-decoration: none;
     transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
 }
 
 .contact-item:hover {
     background-color: #fff;
-    transform: scale(1.2); /* Larger scale for emphasis */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    transform: scale(1.2);
+    /* Larger scale for emphasis */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Enhanced shadow */
 }
 
 .contact-item i {
@@ -821,7 +849,8 @@ body {
 }
 
 .contact-item:hover i {
-    color: #1ab1e3; /* Icon color change on hover */
+    color: #1ab1e3;
+    /* Icon color change on hover */
 }
 
 /* Responsive Design */
@@ -832,20 +861,24 @@ body {
     }
 
     .contact-item {
-        width: 60px; /* Adjusted size for smaller screens */
+        width: 60px;
+        /* Adjusted size for smaller screens */
         height: 60px;
-        font-size: 24px; /* Adjusted icon size */
+        font-size: 24px;
+        /* Adjusted icon size */
     }
+
     .contact-info {
         gap: 6px;
     }
+
     .contact {
         min-height: 20vh;
     }
 }
 
 @media (min-width: 768px) {
-   
+
     .contact {
         min-height: 20vh;
     }
@@ -853,23 +886,26 @@ body {
 
 @media (max-width: 480px) {
     .contact-item {
-        width: 50px; /* Further adjust size for very small screens */
+        width: 50px;
+        /* Further adjust size for very small screens */
         height: 50px;
         font-size: 20px;
     }
+
     .contact {
-        
+
         min-height: 20vh;
     }
 }
 
 @media (max-width: 360px) {
- 
+
     .contact-info {
         gap: 4px;
     }
+
     .contact {
-        
+
         min-height: 22vh;
     }
 }
@@ -880,7 +916,8 @@ body {
 footer {
     background-color: #222831;
     color: #EEEEEE;
-    padding: 15px 0; /* Reduced padding */
+    padding: 15px 0;
+    /* Reduced padding */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -895,28 +932,33 @@ footer {
     justify-content: space-between;
     width: 90%;
     max-width: 1200px;
-    font-size: 14px; /* Smaller font size */
+    font-size: 14px;
+    /* Smaller font size */
 }
 
 .footer-content p {
     margin: 0;
-    font-size: 15px; /* Smaller font size */
+    font-size: 15px;
+    /* Smaller font size */
 }
 
 .social-icons {
     display: flex;
-    gap: 10px; /* Reduced gap between icons */
+    gap: 10px;
+    /* Reduced gap between icons */
 }
 
 .social-icons a {
     display: inline-block;
-    width: 20px; /* Smaller icon size */
+    width: 20px;
+    /* Smaller icon size */
     height: 20px;
     transition: transform 0.3s ease;
 }
 
 .social-icons a:hover {
-    transform: scale(1.1); /* Smaller scale on hover */
+    transform: scale(1.1);
+    /* Smaller scale on hover */
 }
 
 .social-icons img {
@@ -934,16 +976,19 @@ a {
     .footer-content {
         flex-direction: row;
         justify-content: space-between;
-        font-size: 10px; /* Even smaller font size for medium screens */
+        font-size: 10px;
+        /* Even smaller font size for medium screens */
     }
 
     .social-icons a {
-        width: 16px; /* Smaller icons for medium screens */
+        width: 16px;
+        /* Smaller icons for medium screens */
         height: 16px;
     }
 
     .social-icons {
-        gap: 6px; /* Reduced gap between icons for medium screens */
+        gap: 6px;
+        /* Reduced gap between icons for medium screens */
     }
 }
 
@@ -951,18 +996,22 @@ a {
     .footer-content {
         flex-direction: row;
         justify-content: space-between;
-        font-size: 8px; /* Smallest font size for small screens */
+        font-size: 8px;
+        /* Smallest font size for small screens */
     }
 
     .social-icons a {
-        width: 12px; /* Smallest icons for small screens */
+        width: 12px;
+        /* Smallest icons for small screens */
         height: 12px;
     }
 
     .social-icons {
-        gap: 4px; /* Smallest gap between icons for small screens */
+        gap: 4px;
+        /* Smallest gap between icons for small screens */
     }
 }
+
 /* 
 @keyframes slideUp {
     from {
