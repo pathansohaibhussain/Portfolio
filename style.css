@@ -4,6 +4,33 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Scroll to Top Button Styles */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    /* Hidden by default */
+}
+
+#scrollTopBtn img {
+    width: 52px;
+    /* Adjust size as needed */
+    height: 52px;
+    border-radius: 50%;
+}
+
+#scrollTopBtn img:hover {
+    transform: scale(1.1);
+    /* Slight zoom effect on hover */
+    transition: transform 0.2s ease;
+}
+
+
 
 /* General body styling */
 body {
@@ -1011,16 +1038,3 @@ a {
         /* Smallest gap between icons for small screens */
     }
 }
-
-/* 
-@keyframes slideUp {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-} */
